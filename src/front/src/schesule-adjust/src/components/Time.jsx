@@ -21,6 +21,13 @@ export default function Time(props) {
                     <td><Button variant="contained" color="primary">オンライン会議</Button></td>
                 </>
             )
+        } else if (p.hour == 12) {
+            return (
+                <>
+                    <td>{p.hour}:{p.minites}</td>
+                    <td><Button variant="contained" color="primary">オンライン会議</Button></td>
+                </>
+            )
         }  
         else {
             if (p.day_class == 0) {
