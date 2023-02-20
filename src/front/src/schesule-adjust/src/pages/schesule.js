@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import  Day  from "@/components/Day"
-import { getDays } from "pages/api/days"
+import {getDays}  from "pages/api/days"
 
 
 export default function Schesule() {
