@@ -1,19 +1,19 @@
 import { useEffect, useState } from 'react';
 
-import { Day } from "components/Day"
+import  Day  from "@/components/Day"
 import { getDays } from "pages/api/days"
 
 
-function Schesule() {
+export default function Schesule() {
+    const [days,setDays] = useState([])
     useEffect(() => {
-        async () => {
-            const days = await getDays()
+        async function fethDays(){
+            const response = await getDays()
+            setDays(response)
         }
+        fethDays()
     },[])
     return (
         <Day props={days}/>
     )
 }
-
-
-export default Schesule()

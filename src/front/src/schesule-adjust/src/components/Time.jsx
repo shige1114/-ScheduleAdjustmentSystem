@@ -1,7 +1,7 @@
 import React from "react"
 import { useEffect, useState } from 'react';
 
-function Time(props){
+export default function Time(props){
     return (
         <div className="Time">
             <tr>
@@ -13,4 +13,3 @@ function Time(props){
 }
 
 
-export default Time

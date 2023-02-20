@@ -1,7 +1,7 @@
 import React from "react"
 import Time from "components/Time";
 
-function Day(props) {
+export default function Day(props) {
     return (
         <div className="Day">
             <table>
@@ -15,8 +15,8 @@ function Day(props) {
             </table>
             <table>
                 <tbody>
-                    {props.map((time) =>
-                        <Time props={time} />
+                    {props.map((time,index) =>
+                        <Time props={time} key={index} />
                     )}
                 </tbody>
             </table>
@@ -26,4 +26,3 @@ function Day(props) {
 }
 
 
-export default Day
