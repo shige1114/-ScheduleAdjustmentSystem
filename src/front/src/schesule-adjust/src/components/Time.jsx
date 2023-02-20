@@ -25,7 +25,7 @@ export default function Time(props) {
             return (
                 <>
                     <td>{p.hour}:{p.minites}</td>
-                    <td><Button variant="contained" color="primary">オンライン会議</Button></td>
+                        <td><Button variant="contained" color="error" >調整不可</Button></td>
                 </>
             )
         }  
