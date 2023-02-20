@@ -2,7 +2,7 @@ import React from "react"
 import Time from "components/Time";
 export default function Day(props) {
     const isArray = (props) => { 
-        if (Array.isArray(props)){
+        if (Array.isArray(props) && props.length > 0){
             props.map((time, index) => <Time props={time} key={index} />) 
         }else{
             <h1>kk</h1>
