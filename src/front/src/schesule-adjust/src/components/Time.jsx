@@ -3,6 +3,10 @@ import { useEffect, useState } from 'react';
 import { Button } from "@mui/material";
 export default function Time(props) {
     console.log(props)
+
+    const [text,setText] = useState('調整可')
+    const [canText,setCanText] = useState('調整不可')
+
     const time_ditail = (props) => {
         const p = props["props"]
 
@@ -34,7 +38,7 @@ export default function Time(props) {
                 return (
                     <>
                         <td>{p.hour}:{p.minites}</td>
-                        <td><Button variant="contained" color="success">調整可</Button></td>
+                        <td><Button variant="contained" color="success" onClick={setText('会議予定')}>{text}</Button></td>
                     </>
                 )
             }
@@ -42,7 +46,7 @@ export default function Time(props) {
                 return (
                     <>
                         <td>{p.hour}:{p.minites}</td>
-                        <td><Button variant="contained" color="error" >調整不可</Button></td>
+                        <td><Button variant="contained" color="error" onClick={setCanText('会議予定')}>{text}</Button></td>
                     </>
                 )
             }
