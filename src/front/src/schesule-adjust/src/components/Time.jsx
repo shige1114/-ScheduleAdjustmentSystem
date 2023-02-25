@@ -38,7 +38,7 @@ export default function Time(props) {
                 return (
                     <>
                         <td>{p.hour}:{p.minites}</td>
-                        <td><Button variant="contained" color="success" onClick={setText('会議予定')}>{text}</Button></td>
+                        <td><Button variant="contained" color="success" onClick={()=>setText('会議予定')}>{text}</Button></td>
                     </>
                 )
             }
@@ -46,7 +46,7 @@ export default function Time(props) {
                 return (
                     <>
                         <td>{p.hour}:{p.minites}</td>
-                        <td><Button variant="contained" color="error" onClick={setCanText('会議予定')}>{text}</Button></td>
+                        <td><Button variant="contained" color="error" onClick={()=>setCanText('会議予定')}>{text}</Button></td>
                     </>
                 )
             }
